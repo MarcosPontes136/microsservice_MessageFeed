@@ -1,0 +1,7 @@
+F:\BACKEND\microsservice_MessageFeed\src\main\java\com\microsservice_feedMessage\models\MessageModel.java
+F:\BACKEND\microsservice_MessageFeed\src\main\java\com\microsservice_feedMessage\FeedMessageApplication.java
+F:\BACKEND\microsservice_MessageFeed\src\main\java\com\microsservice_feedMessage\enums\StatusMessage.java
+F:\BACKEND\microsservice_MessageFeed\src\main\java\com\microsservice_feedMessage\dto\MessageDTO.java
+F:\BACKEND\microsservice_MessageFeed\src\main\java\com\microsservice_feedMessage\repositories\MessageRepository.java
+F:\BACKEND\microsservice_MessageFeed\src\main\java\com\microsservice_feedMessage\service\MessageService.java
+F:\BACKEND\microsservice_MessageFeed\src\main\java\com\microsservice_feedMessage\controller\messageController.java
