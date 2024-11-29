@@ -13,6 +13,7 @@ import com.microsservice_feedMessage.dto.MessageDTO;
 import com.microsservice_feedMessage.enums.StatusMessage;
 import com.microsservice_feedMessage.models.MessageModel;
 import com.microsservice_feedMessage.repositories.MessageRepository;
+import com.microsservice_feedMessage.validation.MessageValidator;
 import com.rabbitmq.client.AMQP.Basic.Get;
 
 @Service
@@ -25,6 +26,8 @@ public class MessageService {
     
 	public MessageModel saveMessage(MessageModel messageModel)throws UnsupportedEncodingException, MessagingException {
 		
+		MessageValidator.validate(messageModel);
+		
 		try {
 			logger.info("Tentando montar nome do remetente {}", messageModel.getNome());
 			logger.info("Tentando montar mensagem {}", messageModel.getMensagem());
@@ -33,12 +36,13 @@ public class MessageService {
 	        
 	        messageDTO.setNome(messageModel.getNome());
 	        messageDTO.setMensagem(messageModel.getMensagem());
-	        messageModel.setStatusMessage(StatusMessage.SENT);
+	        messageModel.setStatusMessage(StatusMessage.SUCCESS);
 	        
 	        logger.info("Mensagem montada com sucesso! {}", messageModel.getStatusMessage());
 		} catch (Exception e) {
 			messageModel.setStatusMessage(StatusMessage.ERROR);
 			logger.info("Erro ao montar mensagem! {}", messageModel.getStatusMessage());
+			throw e;
 		}
 		
 		return messageRepository.save(messageModel);
