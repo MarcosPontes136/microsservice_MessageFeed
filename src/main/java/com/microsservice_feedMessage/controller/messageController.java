@@ -30,7 +30,6 @@ public class messageController {
 	public ResponseEntity<MessageModel> sendingMessage(@RequestBody MessageModel messageModel) throws UnsupportedEncodingException, MessagingException{
 		
 		MessageModel savedMessage = messageService.saveMessage(messageModel);
-
         return new ResponseEntity<>(savedMessage, HttpStatus.CREATED);
 	}
 	
