@@ -19,8 +19,8 @@ public class MessageValidator {
     }
 
     private static void validateNull(String message, String fieldName) {
-        if (fieldName == null || message.trim().isEmpty()) {
-            throw new InvalidMessageException("O campo '" +fieldName+ "' não pode estar vazio.");
+        if (message == null || fieldName == null || message.trim().isEmpty()) {
+            throw new InvalidMessageException("O campo " +fieldName+ " não pode estar vazio.");
         }
     }
     
