@@ -1,0 +1,3 @@
+com\microsservice_feedMessage\controller\messageControllerTests.class
+com\microsservice_feedMessage\FeedMessageApplicationTests.class
+com\microsservice_feedMessage\service\messageServiceTests.class
