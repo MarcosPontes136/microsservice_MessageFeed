@@ -1,0 +1,10 @@
+com\microsservice_feedMessage\models\MessageModel.class
+com\microsservice_feedMessage\FeedMessageApplication.class
+com\microsservice_feedMessage\validation\MessageValidator.class
+com\microsservice_feedMessage\enums\StatusMessage.class
+com\microsservice_feedMessage\exceptions\GlobalExceptionHandler.class
+com\microsservice_feedMessage\dto\MessageDTO.class
+com\microsservice_feedMessage\exceptions\InvalidMessageException.class
+com\microsservice_feedMessage\controller\messageController.class
+com\microsservice_feedMessage\repositories\MessageRepository.class
+com\microsservice_feedMessage\service\MessageService.class
